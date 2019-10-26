@@ -2,9 +2,16 @@ package com.crmall.dto;
 
 public class ConsultaValeComprasDTO {
 	
+	private String storeDocument;
 	private String document;
 	private Double value;
 	
+	public String getStoreDocument() {
+		return storeDocument;
+	}
+	public void setStoreDocument(String storeDocument) {
+		this.storeDocument = storeDocument;
+	}
 	public String getDocument() {
 		return document;
 	}

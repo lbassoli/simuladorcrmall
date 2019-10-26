@@ -23,10 +23,11 @@ public class ValeComprasResource {
 		ResponseConsultaValeCompras rsp = new ResponseConsultaValeCompras();
 		rsp.setCode(400);
 		ConsultaValeComprasDTO cons = new ConsultaValeComprasDTO();
-		cons.setDocument(String.valueOf(obj.getFirst("storeDocument")));
+		cons.setStoreDocument(String.valueOf(obj.getFirst("storeDocument")));
 		cons.setDocument(String.valueOf(obj.getFirst("document")));
 		cons.setValue(Double.valueOf(obj.getFirst("value")));
-		if (cons.getDocument().equalsIgnoreCase("341.112.618-33")) {
+		if (cons.getDocument().equalsIgnoreCase("341.112.618-33") && 
+				cons.getStoreDocument().equalsIgnoreCase("00.000.000/0001-90")) {
 			rsp.setCode(200);
 			rsp.setMessage("Dirija-se a Central de Atendimento");
 			rsp.setData("Parabens Voce Saiu no Lucro: R$ 50,00" );
