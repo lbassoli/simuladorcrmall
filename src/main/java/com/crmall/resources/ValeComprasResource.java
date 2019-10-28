@@ -16,7 +16,6 @@ import com.crmall.dto.ResponseConsultaValeCompras;
 @RestController
 @RequestMapping(value="/instant-prize")
 public class ValeComprasResource {
-
 	
 	@RequestMapping(method=RequestMethod.POST, consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
 	public ResponseEntity<ResponseConsultaValeCompras> consultar(HttpServletRequest servletRequest, @RequestParam MultiValueMap<String, String> obj) {
@@ -26,7 +25,7 @@ public class ValeComprasResource {
 		cons.setStoreDocument(String.valueOf(obj.getFirst("storeDocument")));
 		cons.setDocument(String.valueOf(obj.getFirst("document")));
 		cons.setValue(Double.valueOf(obj.getFirst("value")));
-		if (cons.getDocument().equalsIgnoreCase("341.112.618-33") && 
+		if (cons.getDocument().equalsIgnoreCase("000.000.001-91") &&
 				cons.getStoreDocument().equalsIgnoreCase("00.000.000/0001-90")) {
 			rsp.setCode(200);
 			rsp.setMessage("Dirija-se a Central de Atendimento");
